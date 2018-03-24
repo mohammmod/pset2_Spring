@@ -14,7 +14,6 @@ public class Judge {
         String move1Opposite = getOpposite(move1);
         String move2Opposite = getOpposite(move2);
 
-        System.out.println(move1Opposite);
 
         if (move1Opposite.equalsIgnoreCase(moveTwo)) {
             return "Player1 is the winner";

@@ -13,6 +13,18 @@ public class Player1 implements Players {
         return toMove(userChoise,move);
     }
 
+    @Override
+    public boolean wantToPlayAgain() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Do you want to play again? (y/n):");
+        String answer = input.nextLine();
+        if(answer.equalsIgnoreCase("y")||answer.equalsIgnoreCase("yes")){
+            return true;
+        }
+        System.out.println("\nHost - Goodbye!");
+        return false;
+    }
+
     private Moves toMove(String userChoise, PossibleMove move) {
         return move.getMoves().stream()
                 .filter(moves-> moves.getName().equalsIgnoreCase(userChoise))

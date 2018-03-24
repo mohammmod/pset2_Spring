@@ -14,6 +14,11 @@ public class Player2 implements Players {
         return useMentalPowersToChooseTheRightCard(oneMove);
     }
 
+    @Override
+    public boolean wantToPlayAgain() {
+        return true;
+    }
+
     private Moves useMentalPowersToChooseTheRightCard(PossibleMove oneMove) {
         Random rand = new Random();
         List<Moves> cards = oneMove.getMoves();

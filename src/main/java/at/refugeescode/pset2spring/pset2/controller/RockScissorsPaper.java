@@ -11,7 +11,7 @@ public class RockScissorsPaper {
     Displayer displayer = new Displayer();
     public void play() {
         displayer.displayWelcomeMassage();
-        WannaPlayAgain yesOrNo = new WannaPlayAgain();
+
         do {
             PossibleMove move = new PossibleMove();
 
@@ -34,6 +34,6 @@ public class RockScissorsPaper {
             displayer.displayTheWiner(theWinner);
 
 
-        }while (yesOrNo.wannaPlayAgain());
+        }while (players.getPlayer1().wantToPlayAgain()&&players.getPlayer2().wantToPlayAgain());
     }
 }
