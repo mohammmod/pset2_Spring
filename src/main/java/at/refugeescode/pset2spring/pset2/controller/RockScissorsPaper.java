@@ -25,7 +25,7 @@ public class RockScissorsPaper {
 
             Moves move2 = player2.pickUpOneMove(move);
 
-            displayer.displayMovements(move1, move2);
+            displayer.displayMovements(move2, move1);
 
             Judge judge = new Judge();
 
